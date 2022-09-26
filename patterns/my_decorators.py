@@ -22,5 +22,5 @@ if __name__ == '__main__':
     print( addIntegers(1,2) ) # here we pass in positional arguments. They will end up in the tuple called *args
     print( addIntegers(a=1, b=2) ) # here we pass in keyword arguments. They will end up in the **kwargs dictionary
     print( addIntegers(1, b=2) ) # here we pass in keyword and positional arguments
-
+    print( raiseToPower(10, n=3) )
 
