@@ -1,0 +1,66 @@
+Python - Further Advanced
+=========================
+Toby Dussek September 2022
+
+9:30
+11:00
+12:30
+3:00
+4:30
+
+Monday
+- welcome
+- design patterns
+  see https://www.geeksforgeeks.org/python-design-patterns/
+  and https://python-patterns.guide/
+- factory, facade and observer patterns
+- decorator pattern (using @)
+- we will be installing additional packages as needed
+- review exercise
+- state and command patterns
+- RxPY see https://rxpy.readthedocs.io/en/latest/
+
+Tuesday
+- performance
+- examples of concurrency and parallel code
+- thread join and thread locks/rlocks/semaphores
+- joining lots of threads
+- review exercise
+- @ decorator to make classes and methods thread safe (using Lock)
+
+Wednesday
+- multiprocessing
+- profiling
+  see https://pypi.org/project/memory-profiler/
+  @profile must be DIRECTLY above the function to be profiled
+- brief look at testing: doctest, unittest, pytest
+  pytest https://docs.pytest.org/en/latest/
+- microservices
+- Flask
+  https://flask-restful.readthedocs.io/en/latest/quickstart.html#full-example
+- review exercise
+- overview of Django
+  see https://www.tangowithdjango.com/book17/
+- brief overview of Anaconda (in preparation for Thurs/Friday)
+  ... or other ways to write in notebooks
+
+Thursday
+- Python for Data Analysis
+  data sources (csv, xlsx, text, db, url...)
+- using Jupyter notebooks
+  markdown: https://ingeh.medium.com/markdown-for-jupyter-notebooks-cheatsheet-386c05aeebed
+- numpy and data structures: the arange and array 
+  (mutable efficient indexed colletion of same data-type)
+- pandas: series and data-frame
+- review exercise
+
+Friday
+- logging
+- overview of tools and techniques
+  Jupyter Notebooks: ctrl-shift-minus will split a cell
+  see https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/
+- data vizualisation
+- time values
+- data cleansing and preparation
+- review exercise
+- end of course feedback
