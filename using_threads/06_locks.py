@@ -1,5 +1,6 @@
 import threading
 import time
+import sys
 
 # here are some globals
 counter = 1 # this global asset can be accessed by every thread - we will need to lock access
@@ -11,7 +12,9 @@ def workerA():
     try:
         while counter <100: # try to increment up to +100
             counter += 1 # increment
-            print('Worker A increments counter to {}'.format(counter))
+            # NB print statements ALWAYS slow down the code considerably
+            #  sys.stdout.write() can be quicker than print()
+            sys.stdout.write('Worker A increments counter to {}'.format(counter))
     except Exception as e:
         print(e)
     finally:
@@ -24,7 +27,7 @@ def workerB():
     try:
         while counter >-100: # try to decrement all the way to -100
             counter -= 1 # decrement
-            print('Worker B decrements counter to {}'.format(counter))
+            sys.stdout.write('Worker B decrements counter to {}'.format(counter))
     except Exception as e:
         print(e)
     finally:
