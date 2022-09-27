@@ -15,7 +15,15 @@ class TempGetter(Thread):
         response = requests.get(url_template.format(self.city))
         data = json.loads(response.text)
         self.temperature = data['main']['temp']
+        self.description = data['weather'][0]['description']
         # lon = 0
         # lat = 52
         # r = requests.get('https://www.google.co.uk/maps/place/{},{}'.format(lon, lat))
         # print(r.text)
+
+if __name__ == '__main__':
+    t = TempGetter('athlone')
+    t.start()
+
+    t.join()
+    

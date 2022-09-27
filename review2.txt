@@ -1,4 +1,4 @@
-Python Further Advanced Review Exercise 2
+Python Further Advanced Review Exercise 2 1hr 15mins - until 3:00 IE time
 =========================================
 For this project, use modules and imports to separate your code structures
 In a new Python module, declare a 'WeatherGetter' class which inherits from the Thread class.

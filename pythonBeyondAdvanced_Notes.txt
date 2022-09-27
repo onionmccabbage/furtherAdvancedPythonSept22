@@ -4,8 +4,8 @@ Toby Dussek September 2022
 
 9:30
 11:00
-12:30 
-3:00 we are on tea break until 3:15 EI time
+12:30
+3:00
 4:30
 
 Monday
@@ -23,7 +23,7 @@ Monday
 Tuesday
 - performance and timing
 - examples of concurrency and parallel code
-- thread functions and thread classes
+> thread functions and thread classes
 - thread join and thread locks/rlocks/semaphores
 - joining lots of threads
 - async, await and coroutines...
