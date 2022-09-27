@@ -2,13 +2,13 @@
 # the semaphore can control who gets to sell the next ticket
 import random
 import sys
-from time import time
+import time
 import threading
 
 class TicketSeller(threading.Thread):
     ticketsSold = 0
     def __init__(self, sem): # we can pass n a semaphore to be shared by all instances of this class
-        threading.Thread.__init__()
+        threading.Thread.__init__(self)
         self.__sem = sem
         sys.stdout.write('Ticket seller has started selling tickets')
     def run(self):
@@ -26,12 +26,11 @@ class TicketSeller(threading.Thread):
             self.__sem.release()
         # when all done...
         sys.stdout.write('Ticket seller {} sold {} tickets\n'.format(self.getName(), self.ticketsSold))
-
     def randomDelay(self):
         time.sleep(random.randint(0,4)/4) # 0, 0.25, 0.5 or 0.75 seconds
 
 if __name__ == '__main__':
-    ticketsAvailable = 1000 # how many tickets to sell
+    ticketsAvailable = 100 # how many tickets to sell
     # we need a semaphore
     sem = threading.Semaphore(2) # how many concurrent shares of this semaphore
     sellers = []
