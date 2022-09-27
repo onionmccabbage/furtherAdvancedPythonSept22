@@ -4,27 +4,29 @@ Toby Dussek September 2022
 
 9:30
 11:00
-12:30
-3:00
+12:30 
+3:00 we are on tea break until 3:15 EI time
 4:30
 
 Monday
-- welcome
-- design patterns
+> welcome
+> design patterns (and anti-patterns)
   see https://www.geeksforgeeks.org/python-design-patterns/
   and https://python-patterns.guide/
-- factory, facade and observer patterns
-- decorator pattern (using @)
-- we will be installing additional packages as needed
-- review exercise
-- state and command patterns
-- RxPY see https://rxpy.readthedocs.io/en/latest/
+> factory, facade and observer patterns
+> decorator pattern (using @)
+> we will be installing additional packages as needed
+> review exercise
+> state and command patterns
+> RxPY see https://rxpy.readthedocs.io/en/latest/
 
 Tuesday
-- performance
+- performance and timing
 - examples of concurrency and parallel code
+- thread functions and thread classes
 - thread join and thread locks/rlocks/semaphores
 - joining lots of threads
+- async, await and coroutines...
 - review exercise
 - @ decorator to make classes and methods thread safe (using Lock)
 
