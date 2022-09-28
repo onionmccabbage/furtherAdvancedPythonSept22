@@ -32,7 +32,9 @@ def make_thread_safe(cls, method_names, lock_factory):
 # members of a set
 @lock_a_class(['add', 'remove'], Lock)
 class Myclass(set):
-    pass
+    @lock_a_method # just lock this method
+    def method_to_lock():
+        print('this method needs to be thread safe (with locks)')
 
 if __name__ == '__main__':
     my_set = (4,3,2)
@@ -40,3 +42,5 @@ if __name__ == '__main__':
     # is it locked?
     print(my_inst.add.__is_locked) # True
     print(my_inst.remove.__is_locked) # True
+    # did the new metod get locked?
+    print(my_inst.method_to_lock.__is_locked) # True
