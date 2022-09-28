@@ -1,6 +1,9 @@
 import sys
 import socket # a socket server for listening to http(s) requests
 
+from memory_profiler import profile # may need to pip isntall memory_profiler
+
+@profile # we only see the profile when the server quits
 def myServer():
     # we configure our server
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
