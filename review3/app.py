@@ -5,13 +5,19 @@ from flask import Flask
 from flask import render_template
 import requests
 
+from memory_profiler import profile
+
 # we need the weather module
 import weather_app.weather as weather
+
+@profile # we will see a memory profile when the server quits
+def main():
+    app.run()
 
 app = Flask(__name__)
 @app.route('/') 
 def index(): 
-  return render_template('index.html')
+    return render_template('index.html')
 
 @app.route('/osm')
 @app.route('/osm/<lon>/<lat>')
@@ -49,5 +55,8 @@ def kitten(w,h):
 def page_not_found(error):
     return render_template('page_not_found.html'), 404
 
+    
+
 if __name__ == '__main__':
-    app.run()
+    main()
+    
