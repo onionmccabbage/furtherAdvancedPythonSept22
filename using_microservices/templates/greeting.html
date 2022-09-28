@@ -11,6 +11,11 @@
     <article>
         <section>
             <h2>Hello from Flask</h2>
+            {% if name %}
+            <h3>Greetings {{name}}</h3>
+            {% else %}
+            <h3>Greetings anonymous person</h3>
+            {% endif %}
         </section>
     </article>
 </body>

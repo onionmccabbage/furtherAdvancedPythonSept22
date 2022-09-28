@@ -23,13 +23,14 @@ def root():
 @app.route('/hello') # not /hello/ !!!
 @app.route('/hello/<name>') # many routes can use the SAME function
 def hello(name=None):
-    if name != None:
-        return render_template('greeting.html') # Flask will look for a package called 'templates'
-        # return '''
-        # Greetings {} welcome to Flask
-        # '''.format(name)
-    else:
-        return '<h2>Hello from Flask</h2>'
+    # if name != None:
+    #     return render_template('greeting.html') # Flask will look for a package called 'templates'
+    #     # return '''
+    #     # Greetings {} welcome to Flask
+    #     # '''.format(name)
+    # else:
+    #     return '<h2>Hello from Flask</h2>'
+    return render_template('greeting.html', name=name)
 
 def main():
     app.run(host='127.0.0.1') # localhost
