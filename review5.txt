@@ -1,10 +1,14 @@
-Python Data Analysis Review Exercise
+Python Data Analysis Review Exercise for 1hr 15mins (tea break about 2:50 is IE time)
 ====================================
 
 Create a data frame from the following URL:
 http://rcs.bu.edu/examples/python/data_analysis/flights.csv
+(use pd.read_csv to load this into a df)
+df = pd.read_csv('http://rcs.bu.edu/examples/python/data_analysis/flights.csv')
 
-Show how many elements this data has
+Do the folowing in ANY order:
+
+Show how many rows this data has (hundreds of thousands)
 Show the column names and the data types for each column
 Show the statistical summaries for the numeric columns in the dataset with df.describe() 
 Group the data by airline and show the minimum and mean departure delay for each airline
@@ -13,12 +17,12 @@ Use the .agg() method to aggregate min, mean and max delays for departure and ar
   e.g. df[['dep_delay','arr_delay']].agg(['min','mean','max', 'sum'])
 
 Show the number of flight records
-Show the number of unique airlines
+Show the number of unique airlines (nunique)
 How many unique aircraft are represented
 
 What was the greatest recorded delay? (show the related data)
 What are the mean values for just the first 50 records in the dataset?
-What are the mean alues for all delays of 15 or more units?
+What are the mean values for all delays of 15 or more units?
 
 Show a dataframe containing all AA flights that have no missing data members
 Show a dataframe containing all flights departing from LGA, grouped by destination
