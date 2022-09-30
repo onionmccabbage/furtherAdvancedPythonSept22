@@ -1,0 +1,31 @@
+Python Data Analysis Review Exercise
+====================================
+
+Create a data frame from the following URL:
+http://rcs.bu.edu/examples/python/data_analysis/flights.csv
+
+Show how many elements this data has
+Show the column names and the data types for each column
+Show the statistical summaries for the numeric columns in the dataset with df.describe() 
+Group the data by airline and show the minimum and mean departure delay for each airline
+
+Use the .agg() method to aggregate min, mean and max delays for departure and arrival
+  e.g. df[['dep_delay','arr_delay']].agg(['min','mean','max', 'sum'])
+
+Show the number of flight records
+Show the number of unique airlines
+How many unique aircraft are represented
+
+What was the greatest recorded delay? (show the related data)
+What are the mean values for just the first 50 records in the dataset?
+What are the mean alues for all delays of 15 or more units?
+
+Show a dataframe containing all AA flights that have no missing data members
+Show a dataframe containing all flights departing from LGA, grouped by destination
+Show a dataframe containing all flights, grouped by airline and sorted by increasing flight duration
+
+On average, which airline is the most punctual (choose one or more interpretation)
+- punctuality meaning arrives on time or better
+- punctuality meaning departs on time or better
+- punctuality meaning arrive and depart on time or better
+- punctuality meaning arrive and depart exactly on time
